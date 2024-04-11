@@ -23,6 +23,7 @@ st.markdown("<p>The aim of this project is to develop a machine learning model t
 
 # Sidebar Designs 
 st.sidebar.image('pngwing.com-15.png')
+st.divider()
 
 display_data = data.groupby('make')[['price']].mean()
 st.dataframe(display_data , use_container_width= True)
@@ -38,6 +39,7 @@ st.divider()
 st.sidebar.markdown("<br>", unsafe_allow_html= True)
 st.sidebar.markdown("<br>", unsafe_allow_html= True)
 
+st.sidebar.subheader('Input Variables)
 # User Inputs 
 make = st.sidebar.selectbox('Car Model', data['make'].unique())
 sym = st.sidebar.number_input('Symboling', data['symboling'].min(), data['symboling'].max())
